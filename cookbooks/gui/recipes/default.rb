@@ -21,8 +21,12 @@
 # end
 
 ####Then Do This
-package "gnome-session"
-package "ubuntu-desktop"
+package "gnome-session" do
+    timeout 6000
+end
+package "ubuntu-desktop" do
+    timeout 6000
+end
 package "ubuntu-gnome-desktop"
 
 execute 'apt update && apt upgrade -y'

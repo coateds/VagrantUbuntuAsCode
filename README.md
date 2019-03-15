@@ -22,12 +22,18 @@ In order to eliminate the first reboot
 I think there might be a timeout issue with large packages.
 * Installing the "ubuntu-gnome-desktop" directly usually fails
 * Installing the (only?) two dependency packages, "gnome-session" and "ubuntu-desktop" works more reliably?
+  * Increase processors and memory - Did not work
   * Attempt to use a timeout on the package resources if the failures occur often enough
+    * This seems to have worked
 
 gui default.rb
 ```ruby
-package "gnome-session"
-package "ubuntu-desktop"
+package "gnome-session" do
+    timeout 6000
+end
+package "ubuntu-desktop" do
+    timeout 6000
+end
 package "ubuntu-gnome-desktop"
 
 execute 'apt update && apt upgrade -y'
