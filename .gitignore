@@ -2,3 +2,4 @@
 *.vmdk
 Ubuntu1804Patched
 ubuntu-bionic-18.04-cloudimg-console.log
+nodes/

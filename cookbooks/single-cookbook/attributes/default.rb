@@ -1,0 +1,1 @@
+default['log-file']['path'] = '/home/vagrant/chef_provision.log'
