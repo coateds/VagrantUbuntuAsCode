@@ -12,3 +12,8 @@ Add/Copy tz cookbook
 
 ## Refactor 3
 Add devops-apps cookbook
+
+## Refactor 4
+* collapse all cookbooks into one: "single-cookbook"
+* Use attribute to store log file location
+* append information and tests in each recipe to log file

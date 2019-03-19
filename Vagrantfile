@@ -35,14 +35,13 @@ Vagrant.configure("2") do |config|
     chef.nodes_path = "nodes"
     chef.roles_path = "roles"
 
-    chef.add_recipe "partitions-filesystems"
-    chef.add_recipe "tz"    
-    chef.add_recipe "gui"
-    chef.add_recipe "devops-apps"
+    chef.add_recipe "single-cookbook::default"
+    chef.add_recipe "single-cookbook::partitions-filesystems"
+    chef.add_recipe "single-cookbook::tz"
+    chef.add_recipe "single-cookbook::gui"
+    chef.add_recipe "single-cookbook::devops-apps"
 
     # Next refactor
     # chef.run_list = ["recipe[single-cook::default]"]
-    # chef.add_recipe "single-cookbook::default"
-    # chef.add_recipe "single-cookbook::notdefault"
   end
 end
